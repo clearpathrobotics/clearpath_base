@@ -2,6 +2,14 @@
 Changelog for package clearpath_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.0 (2013-09-10)
+------------------
+* Removed most of the unneeded messages.
+* Moved node scripts into /nodes directory.
+* Moved node bases into clearpath_node library.
+* Node scripts now kinematic.py -> kinematic_node, etc.
+* install targets.
+
 0.3.1 (2013-07-19)
 ------------------
 * Added missing build_depend to clearpath_base
