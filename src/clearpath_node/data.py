@@ -13,9 +13,6 @@ msgs = {
     'differential_control': DifferentialControl,
     'differential_output': DifferentialOutput,
     'velocity': VelocitySetpt,
-    'platform_orientation': Orientation,
-    'platform_rotation': RotateRate,
-    'platform_magnetometer': Magnetometer,
     'encoders': Encoders,
     'raw_encoders': RawEncoders,
     'distance': Distance
@@ -87,21 +84,6 @@ def pkg_ackermann_output(payload):
 def pkg_velocity(payload):
     msg = VelocitySetpt()
     copy_attributes(payload, msg, ['trans', 'rot', 'accel'])
-    return msg
-
-def pkg_platform_orientation(payload):
-    msg = Orientation()
-    copy_attributes(payload, msg, ['roll', 'pitch', 'yaw'])
-    return msg
-
-def pkg_platform_rotation(payload):
-    msg = RotateRate()
-    copy_attributes(payload, msg, ['roll', 'pitch', 'yaw'])
-    return msg
-
-def pkg_platform_magnetometer(payload):
-    msg = Magnetometer()
-    copy_attributes(payload, msg, ['x', 'y', 'z'])
     return msg
 
 def pkg_encoders(payload):

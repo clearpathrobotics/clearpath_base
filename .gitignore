@@ -1,10 +1,2 @@
-.cproject
-.project
-.pydevproject
-cmake_install.cmake
-build/
-lib/
-msg_gen/
-srv_gen/
 *.py[cod]
 *.so

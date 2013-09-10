@@ -3,7 +3,7 @@
   <name>clearpath_base</name>
   <version>0.3.1</version>
   <description>
-     The base drivers needed to connect with the onboard system for all Clearpath Robotics platforms.
+     Serial interface for Clearpath Robotics Husky.
   </description>
   <author email="mpurvis@clearpathrobotics.com">Mike Purvis</author>
   <maintainer email="abencz@clearpathrobotics.com">Alex Bencz</maintainer>
