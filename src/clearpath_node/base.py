@@ -1,8 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-
-# ROS stuff
-import roslib; roslib.load_manifest('clearpath_base')
 import rospy
 
 from clearpath_base.msg import ClearpathRobot

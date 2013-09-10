@@ -1,6 +1,4 @@
-import roslib; roslib.load_manifest('clearpath_base')
 import rospy
-
 from clearpath_base.msg import *
 
 # This structure maps ROS data topics to message classes

@@ -21,7 +21,9 @@ generate_messages(
   geometry_msgs std_msgs
 )
 
-catkin_package()
+catkin_package(CATKIN_DEPENDS geometry_msgs std_msgs message_runtime)
+
+include_directories(${catkin_INCLUDE_DIRS})
 
 #############
 ## Install ##
