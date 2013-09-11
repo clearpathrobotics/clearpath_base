@@ -2,6 +2,10 @@
 Changelog for package clearpath_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.1 (2013-09-10)
+------------------
+* No change, just re-releasing due to version mixup on build farm.
+
 0.4.0 (2013-09-10)
 ------------------
 * Removed most of the unneeded messages.
