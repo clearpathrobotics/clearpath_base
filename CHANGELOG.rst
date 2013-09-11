@@ -2,6 +2,11 @@
 Changelog for package clearpath_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.2 (2013-09-11)
+------------------
+* Switch to an explicit GLOB for building messages, as the implicit one is broken for the build target.
+* Remove build dependency on rospy.
+
 0.4.1 (2013-09-10)
 ------------------
 * No change, just re-releasing due to version mixup on build farm.
