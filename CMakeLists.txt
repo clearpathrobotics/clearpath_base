@@ -10,16 +10,9 @@ catkin_python_setup()
 #######################################
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  DIRECTORY
-  msg
-)
-
-## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  geometry_msgs std_msgs
-)
+file(GLOB msg_files RELATIVE ${PROJECT_SOURCE_DIR}/msg msg/*.msg)
+add_message_files(FILES ${msg_files})
+generate_messages(DEPENDENCIES geometry_msgs std_msgs)
 
 catkin_package(CATKIN_DEPENDS geometry_msgs std_msgs message_runtime)
 
