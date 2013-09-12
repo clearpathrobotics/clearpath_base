@@ -11,7 +11,7 @@ catkin_python_setup()
 
 ## Generate messages in the 'msg' folder
 file(GLOB msg_files RELATIVE ${PROJECT_SOURCE_DIR}/msg msg/*.msg)
-add_message_files(FILES ${msg_files})
+add_message_files(msg FILES ${msg_files})
 generate_messages(DEPENDENCIES geometry_msgs std_msgs)
 
 catkin_package(CATKIN_DEPENDS geometry_msgs std_msgs message_runtime)
@@ -27,5 +27,10 @@ install(PROGRAMS
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-install(DIRECTORY launch  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+install(DIRECTORY launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+
+# Workaround for https://github.com/ros/genmsg/issues/34
+install(FILES ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_DESTINATION}/__init__.py
+  DESTINATION ${CATKIN_PACKAGE_PYTHON_DESTINATION})
 
