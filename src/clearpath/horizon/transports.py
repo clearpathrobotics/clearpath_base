@@ -186,6 +186,7 @@ import threading                # Python Thread Support
 import time                     # System Date & Time
 import collections              # deque
 import math
+from select import select
 
 # Version Dependent Modules
 try:
@@ -453,7 +454,12 @@ class Serial(Transport):
             self._running = True
             
             while self._running:
-                # Check for message
+                # Block until serial data available
+                rlist, _, _ = select([ self._serial ], [], [], 1.0)
+                if not rlist:
+                  time.sleep(0.001)
+                  continue
+       
                 try:
                     message = None
                     message = self._get_message()
@@ -510,9 +516,6 @@ class Serial(Transport):
                         if current > message_record.expiry:
                             del self._acks[ts]
 
-                # Release Processor
-                time.sleep(0.001)
-            
             logger.debug("%s: Exiting receive loop for %s." % 
                          (self.__class__.__name__, self._serial.portstr))
  
