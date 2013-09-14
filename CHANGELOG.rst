@@ -2,6 +2,13 @@
 Changelog for package clearpath_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2013-09-13)
+------------------
+* Block with select() in data receive loop.
+* Explicitly install clearpath.horizon as well as clearpath.
+* Typo fix in reverting some of the other bug-hunting experiments.
+* Workaround for issue with python modules and installing messages.
+
 0.4.2 (2013-09-11)
 ------------------
 * Switch to an explicit GLOB for building messages, as the implicit one is broken for the build target.
