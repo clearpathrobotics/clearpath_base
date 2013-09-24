@@ -30,7 +30,3 @@ install(PROGRAMS
 install(DIRECTORY launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
 
-# Workaround for https://github.com/ros/genmsg/issues/34
-install(FILES ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_DESTINATION}/__init__.py
-  DESTINATION ${CATKIN_PACKAGE_PYTHON_DESTINATION})
-
