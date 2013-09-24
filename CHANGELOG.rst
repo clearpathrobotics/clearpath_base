@@ -2,6 +2,10 @@
 Changelog for package clearpath_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.4 (2013-09-23)
+------------------
+* Remove install() rule workaround, add version callouts to package.xml
+
 0.4.3 (2013-09-13)
 ------------------
 * Block with select() in data receive loop.
