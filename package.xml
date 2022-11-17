@@ -22,7 +22,7 @@
   <run_depend>message_runtime</run_depend>
   <run_depend>geometry_msgs</run_depend>
   <run_depend>pkg-config</run_depend>
-  <run_depend>python-serial</run_depend>
+  <run_depend>python3-serial</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>std_msgs</run_depend>
 
